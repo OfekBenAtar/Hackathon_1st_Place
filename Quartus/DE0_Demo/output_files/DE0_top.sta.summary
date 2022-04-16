@@ -1,0 +1,165 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'out_BUTTON_2'
+Slack : -0.883
+TNS   : -0.883
+
+Type  : Slow 1100mV 85C Model Setup 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 786.841
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'out_BUTTON_2'
+Slack : 0.374
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.533
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 840.682
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.582
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'out_BUTTON_2'
+Slack : -0.538
+TNS   : -0.873
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'PLL_instance|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.949
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 425.763
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'out_BUTTON_2'
+Slack : -0.823
+TNS   : -0.823
+
+Type  : Slow 1100mV 0C Model Setup 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 788.803
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'out_BUTTON_2'
+Slack : 0.417
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.555
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 841.093
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.303
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'out_BUTTON_2'
+Slack : -0.538
+TNS   : -0.819
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'PLL_instance|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.980
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 425.639
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'out_BUTTON_2'
+Slack : -0.014
+TNS   : -0.014
+
+Type  : Fast 1100mV 85C Model Setup 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 812.429
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'out_BUTTON_2'
+Slack : 0.235
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 845.640
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.617
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'out_BUTTON_2'
+Slack : 0.120
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'PLL_instance|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.643
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 426.145
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'out_BUTTON_2'
+Slack : 0.035
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 817.501
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'out_BUTTON_2'
+Slack : 0.220
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 846.406
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.320
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'out_BUTTON_2'
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'PLL_instance|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.632
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'PLL_instance|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 426.139
+TNS   : 0.000
+
+------------------------------------------------------------

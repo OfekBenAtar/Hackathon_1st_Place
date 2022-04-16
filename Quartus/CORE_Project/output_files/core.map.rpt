@@ -1,0 +1,641 @@
+Analysis & Synthesis report for core
+Thu Mar 18 08:22:01 2021
+Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |core
+ 12. Parameter Settings for User Entity Instance: controlUnit:controlUnit_inst
+ 13. Parameter Settings for User Entity Instance: programCounter:program_counter_inst
+ 14. Parameter Settings for User Entity Instance: regFile:reg_file_inst
+ 15. Parameter Settings for User Entity Instance: executionUnit:exec_unit_inst
+ 16. Parameter Settings for User Entity Instance: executionUnit:exec_unit_inst|alu:ALU
+ 17. Parameter Settings for User Entity Instance: executionUnit:exec_unit_inst|lis:LIS
+ 18. Parameter Settings for User Entity Instance: executionUnit:exec_unit_inst|br:BR
+ 19. Parameter Settings for User Entity Instance: crs_unit:crs_unit_inst
+ 20. Parameter Settings for User Entity Instance: crs_unit:crs_unit_inst|timer:timer_inst
+ 21. Port Connectivity Checks: "controlUnit:controlUnit_inst"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Mar 18 08:22:01 2021      ;
+; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
+; Revision Name                   ; core                                       ;
+; Top-level Entity Name           ; core                                       ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 1163                                       ;
+; Total pins                      ; 119                                        ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI PMA TX Serializers   ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; core               ; core               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Verilog Show LMF Mapping Messages                                               ; Off                ;                    ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                   ;
++----------------------------------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                                 ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                               ; Library ;
++----------------------------------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; ../../src/core/core.v                                                            ; yes             ; User Verilog HDL File        ; C:/Users/freddy gabbay/Documents/Riscv for DE0/RV32i-Verilog-master/src/core/core.v                                        ;         ;
+; ../../src/core/core_control_unit.v                                               ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/freddy gabbay/Documents/Riscv for DE0/RV32i-Verilog-master/src/core/core_control_unit.v                           ;         ;
+; ../../src/core/core_program_counter.v                                            ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/freddy gabbay/Documents/Riscv for DE0/RV32i-Verilog-master/src/core/core_program_counter.v                        ;         ;
+; ../../src/core/core_regfile.v                                                    ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/freddy gabbay/Documents/Riscv for DE0/RV32i-Verilog-master/src/core/core_regfile.v                                ;         ;
+; ../../src/core/core_execution_unit/core_execution_unit_alu.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/freddy gabbay/Documents/Riscv for DE0/RV32i-Verilog-master/src/core/core_execution_unit/core_execution_unit_alu.v ;         ;
+; ../../src/core/core_execution_unit/core_execution_unit_lis.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/freddy gabbay/Documents/Riscv for DE0/RV32i-Verilog-master/src/core/core_execution_unit/core_execution_unit_lis.v ;         ;
+; ../../src/core/core_execution_unit/core_execution_unit_br.v                      ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/freddy gabbay/Documents/Riscv for DE0/RV32i-Verilog-master/src/core/core_execution_unit/core_execution_unit_br.v  ;         ;
+; ../../src/core/core_execution_unit/core_execution_unit.v                         ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/freddy gabbay/Documents/Riscv for DE0/RV32i-Verilog-master/src/core/core_execution_unit/core_execution_unit.v     ;         ;
+; ../../src/core/core_csr_unit/core_csr_unit_timer.v                               ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/freddy gabbay/Documents/Riscv for DE0/RV32i-Verilog-master/src/core/core_csr_unit/core_csr_unit_timer.v           ;         ;
+; ../../src/core/core_csr_unit/core_csr_unit.v                                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/freddy gabbay/Documents/Riscv for DE0/RV32i-Verilog-master/src/core/core_csr_unit/core_csr_unit.v                 ;         ;
+; /users/freddy gabbay/documents/riscv for de0/rv32i-verilog-master/src/defines.vh ; yes             ; Auto-Found Unspecified File  ; /users/freddy gabbay/documents/riscv for de0/rv32i-verilog-master/src/defines.vh                                           ;         ;
++----------------------------------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 1428      ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 1655      ;
+;     -- 7 input functions                    ; 27        ;
+;     -- 6 input functions                    ; 1026      ;
+;     -- 5 input functions                    ; 201       ;
+;     -- 4 input functions                    ; 129       ;
+;     -- <=3 input functions                  ; 272       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 1163      ;
+;                                             ;           ;
+; I/O pins                                    ; 119       ;
+; Total DSP Blocks                            ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1163      ;
+; Total fan-out                               ; 13508     ;
+; Average fan-out                             ; 4.42      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                               ;
++------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------+--------------+
+; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Library Name ;
++------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------+--------------+
+; |core                                    ; 1655 (87)         ; 1163 (0)     ; 0                 ; 0          ; 119  ; 0            ; |core                                         ; work         ;
+;    |controlUnit:controlUnit_inst|        ; 89 (89)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |core|controlUnit:controlUnit_inst            ; work         ;
+;    |crs_unit:crs_unit_inst|              ; 86 (22)           ; 107 (43)     ; 0                 ; 0          ; 0    ; 0            ; |core|crs_unit:crs_unit_inst                  ; work         ;
+;       |timer:timer_inst|                 ; 64 (64)           ; 64 (64)      ; 0                 ; 0          ; 0    ; 0            ; |core|crs_unit:crs_unit_inst|timer:timer_inst ; work         ;
+;    |executionUnit:exec_unit_inst|        ; 979 (478)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |core|executionUnit:exec_unit_inst            ; work         ;
+;       |alu:ALU|                          ; 427 (427)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |core|executionUnit:exec_unit_inst|alu:ALU    ; work         ;
+;       |br:BR|                            ; 36 (36)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |core|executionUnit:exec_unit_inst|br:BR      ; work         ;
+;       |lis:LIS|                          ; 38 (38)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |core|executionUnit:exec_unit_inst|lis:LIS    ; work         ;
+;    |programCounter:program_counter_inst| ; 1 (1)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |core|programCounter:program_counter_inst     ; work         ;
+;    |regFile:reg_file_inst|               ; 413 (413)         ; 1024 (1024)  ; 0                 ; 0          ; 0    ; 0            ; |core|regFile:reg_file_inst                   ; work         ;
++------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                   ;
++-------------------------------------------------+----------------------------------------------------+
+; Register name                                   ; Reason for Removal                                 ;
++-------------------------------------------------+----------------------------------------------------+
+; crs_unit:crs_unit_inst|timer_val_o[5..9,11..31] ; Merged with crs_unit:crs_unit_inst|timer_val_o[10] ;
+; crs_unit:crs_unit_inst|timer_val_o[38..63]      ; Merged with crs_unit:crs_unit_inst|timer_val_o[37] ;
+; crs_unit:crs_unit_inst|timer_val_o[10,37]       ; Stuck at GND due to stuck port data_in             ;
+; Total Number of Removed Registers = 54          ;                                                    ;
++-------------------------------------------------+----------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1163  ;
+; Number of registers using Synchronous Clear  ; 54    ;
+; Number of registers using Synchronous Load   ; 74    ;
+; Number of registers using Asynchronous Clear ; 1131  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1066  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |core|programCounter:program_counter_inst|pc[20]    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |core|crs_unit:crs_unit_inst|timer_val_o[2]         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |core|crs_unit:crs_unit_inst|timer_val_o[32]        ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |core|crs_unit:crs_unit_inst|csr_val_o[17]          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |core|controlUnit:controlUnit_inst|Selector6        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |core|controlUnit:controlUnit_inst|Selector0        ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |core|controlUnit:controlUnit_inst|Selector0        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 49 bits   ; 98 LEs        ; 98 LEs               ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |core|controlUnit:controlUnit_inst|csr_data_o[2]    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |core|executionUnit:exec_unit_inst|Mux25            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |core|executionUnit:exec_unit_inst|Mux1             ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |core|controlUnit:controlUnit_inst|Selector0        ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |core|regFile:reg_file_inst|rs2[15]                 ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |core|executionUnit:exec_unit_inst|Mux20            ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; No         ; |core|executionUnit:exec_unit_inst|br:BR|offset[18] ;
+; 34:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |core|executionUnit:exec_unit_inst|s1_ALU[1]        ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |core|controlUnit:controlUnit_inst|Selector12       ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |core|controlUnit:controlUnit_inst|Selector23       ;
+; 21:1               ; 5 bits    ; 70 LEs        ; 55 LEs               ; 15 LEs                 ; No         ; |core|executionUnit:exec_unit_inst|alu:ALU|Mux25    ;
+; 22:1               ; 8 bits    ; 112 LEs       ; 96 LEs               ; 16 LEs                 ; No         ; |core|executionUnit:exec_unit_inst|alu:ALU|Mux7     ;
+; 134:1              ; 2 bits    ; 178 LEs       ; 26 LEs               ; 152 LEs                ; No         ; |core|controlUnit:controlUnit_inst|Selector27       ;
+; 135:1              ; 2 bits    ; 180 LEs       ; 20 LEs               ; 160 LEs                ; No         ; |core|controlUnit:controlUnit_inst|Selector31       ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; No         ; |core|executionUnit:exec_unit_inst|alu:ALU|Mux22    ;
+; 21:1               ; 3 bits    ; 42 LEs        ; 33 LEs               ; 9 LEs                  ; No         ; |core|executionUnit:exec_unit_inst|alu:ALU|Mux19    ;
+; 24:1               ; 3 bits    ; 48 LEs        ; 39 LEs               ; 9 LEs                  ; No         ; |core|executionUnit:exec_unit_inst|alu:ALU|Mux29    ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |core|executionUnit:exec_unit_inst|alu:ALU|Mux5     ;
+; 25:1               ; 3 bits    ; 48 LEs        ; 42 LEs               ; 6 LEs                  ; No         ; |core|executionUnit:exec_unit_inst|alu:ALU|Mux2     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |core ;
++-------------------+-------+------------------------------------------+
+; Parameter Name    ; Value ; Type                                     ;
++-------------------+-------+------------------------------------------+
+; MEM_ADDR_WIDTH    ; 8     ; Signed Integer                           ;
+; DATA_WIDTH        ; 32    ; Signed Integer                           ;
+; TRANSFER_WIDTH    ; 4     ; Signed Integer                           ;
+; CSR_OP_WIDTH      ; 3     ; Signed Integer                           ;
+; CSR_ADDR_WIDTH    ; 12    ; Signed Integer                           ;
+; ALU_OP_WIDTH      ; 4     ; Signed Integer                           ;
+; LIS_OP_WIDTH      ; 3     ; Signed Integer                           ;
+; BR_OP_WIDTH       ; 2     ; Signed Integer                           ;
+; DATA_ORIGIN_WIDTH ; 2     ; Signed Integer                           ;
+; REG_ADDR_WIDTH    ; 5     ; Signed Integer                           ;
++-------------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controlUnit:controlUnit_inst ;
++-------------------+-------+-----------------------------------------------+
+; Parameter Name    ; Value ; Type                                          ;
++-------------------+-------+-----------------------------------------------+
+; MEM_ADDR_WIDTH    ; 8     ; Signed Integer                                ;
+; DATA_WIDTH        ; 32    ; Signed Integer                                ;
+; TRANSFER_WIDTH    ; 4     ; Signed Integer                                ;
+; CSR_OP_WIDTH      ; 3     ; Signed Integer                                ;
+; CSR_ADDR_WIDTH    ; 12    ; Signed Integer                                ;
+; ALU_OP_WIDTH      ; 4     ; Signed Integer                                ;
+; LIS_OP_WIDTH      ; 3     ; Signed Integer                                ;
+; BR_OP_WIDTH       ; 2     ; Signed Integer                                ;
+; DATA_ORIGIN_WIDTH ; 2     ; Signed Integer                                ;
+; REG_ADDR_WIDTH    ; 5     ; Signed Integer                                ;
+; CSRRW             ; 1     ; Signed Integer                                ;
+; CSRRS             ; 2     ; Signed Integer                                ;
+; CSRRC             ; 3     ; Signed Integer                                ;
+; CSRRWI            ; 4     ; Signed Integer                                ;
+; CSRRSI            ; 5     ; Signed Integer                                ;
+; CSRRCI            ; 6     ; Signed Integer                                ;
+; ALU_OP_ADD        ; 0     ; Signed Integer                                ;
+; ALU_OP_SUB        ; 1     ; Signed Integer                                ;
+; ALU_OP_SLL        ; 2     ; Signed Integer                                ;
+; ALU_OP_SLT        ; 3     ; Signed Integer                                ;
+; ALU_OP_SLTU       ; 4     ; Signed Integer                                ;
+; ALU_OP_XOR        ; 5     ; Signed Integer                                ;
+; ALU_OP_SRL        ; 6     ; Signed Integer                                ;
+; ALU_OP_SRA        ; 7     ; Signed Integer                                ;
+; ALU_OP_OR         ; 8     ; Signed Integer                                ;
+; ALU_OP_AND        ; 9     ; Signed Integer                                ;
++-------------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: programCounter:program_counter_inst ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; REG_DATA_WIDTH ; 32    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regFile:reg_file_inst ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; DATA_WIDTH     ; 32    ; Signed Integer                            ;
+; REG_DEPTH      ; 32    ; Signed Integer                            ;
+; REG_ADDR_WIDTH ; 5     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: executionUnit:exec_unit_inst ;
++-------------------+-------+-----------------------------------------------+
+; Parameter Name    ; Value ; Type                                          ;
++-------------------+-------+-----------------------------------------------+
+; MEM_ADDR_WIDTH    ; 8     ; Signed Integer                                ;
+; DATA_WIDTH        ; 32    ; Signed Integer                                ;
+; ALU_OP_WIDTH      ; 4     ; Signed Integer                                ;
+; LIS_OP_WIDTH      ; 3     ; Signed Integer                                ;
+; BR_OP_WIDTH       ; 2     ; Signed Integer                                ;
+; DATA_ORIGIN_WIDTH ; 2     ; Signed Integer                                ;
+; REGS              ; 0     ; Signed Integer                                ;
+; RS2IMM_RS1        ; 1     ; Signed Integer                                ;
+; RS2IMM_RS1PC      ; 2     ; Signed Integer                                ;
++-------------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: executionUnit:exec_unit_inst|alu:ALU ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; ALU_OPWIDTH    ; 4     ; Signed Integer                                           ;
+; DATA_WIDTH     ; 32    ; Signed Integer                                           ;
+; ALU_OP_ADD     ; 0     ; Signed Integer                                           ;
+; ALU_OP_SUB     ; 1     ; Signed Integer                                           ;
+; ALU_OP_SLL     ; 2     ; Signed Integer                                           ;
+; ALU_OP_SLT     ; 3     ; Signed Integer                                           ;
+; ALU_OP_SLTU    ; 4     ; Signed Integer                                           ;
+; ALU_OP_XOR     ; 5     ; Signed Integer                                           ;
+; ALU_OP_SRL     ; 6     ; Signed Integer                                           ;
+; ALU_OP_SRA     ; 7     ; Signed Integer                                           ;
+; ALU_OP_OR      ; 8     ; Signed Integer                                           ;
+; ALU_OP_AND     ; 9     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: executionUnit:exec_unit_inst|lis:LIS ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; LIS_OP_WIDTH   ; 3     ; Signed Integer                                           ;
+; DATA_WIDTH     ; 32    ; Signed Integer                                           ;
+; MEM_ADDR_WIDTH ; 8     ; Signed Integer                                           ;
+; LIS_LB         ; 0     ; Signed Integer                                           ;
+; LIS_LH         ; 1     ; Signed Integer                                           ;
+; LIS_LW         ; 2     ; Signed Integer                                           ;
+; LIS_LBU        ; 3     ; Signed Integer                                           ;
+; LIS_LHU        ; 4     ; Signed Integer                                           ;
+; LIS_SB         ; 5     ; Signed Integer                                           ;
+; LIS_SH         ; 6     ; Signed Integer                                           ;
+; LIS_SW         ; 7     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: executionUnit:exec_unit_inst|br:BR ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; BR_OP_WIDTH    ; 2     ; Signed Integer                                         ;
+; DATA_WIDTH     ; 32    ; Signed Integer                                         ;
+; BR_EQ          ; 0     ; Signed Integer                                         ;
+; BR_NE          ; 1     ; Signed Integer                                         ;
+; BR_LT          ; 2     ; Signed Integer                                         ;
+; BR_GE          ; 3     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: crs_unit:crs_unit_inst ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; CSR_XLEN       ; 64    ; Signed Integer                             ;
+; REG_XLEN       ; 32    ; Signed Integer                             ;
+; DATA_WIDTH     ; 32    ; Signed Integer                             ;
+; CSR_OP_WIDTH   ; 3     ; Signed Integer                             ;
+; CSR_ADDR_WIDTH ; 12    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: crs_unit:crs_unit_inst|timer:timer_inst ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; CSR_XLEN       ; 64    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlUnit:controlUnit_inst"                                                                                     ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                  ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; is_load_store ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 1163                        ;
+;     CLR               ; 1                           ;
+;     CLR SCLR          ; 54                          ;
+;     CLR SLD           ; 42                          ;
+;     ENA CLR           ; 1034                        ;
+;     ENA SLD           ; 32                          ;
+; arriav_lcell_comb     ; 1655                        ;
+;     arith             ; 161                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 64                          ;
+;         4 data inputs ; 3                           ;
+;         5 data inputs ; 93                          ;
+;     extend            ; 27                          ;
+;         7 data inputs ; 27                          ;
+;     normal            ; 1467                        ;
+;         2 data inputs ; 97                          ;
+;         3 data inputs ; 110                         ;
+;         4 data inputs ; 126                         ;
+;         5 data inputs ; 108                         ;
+;         6 data inputs ; 1026                        ;
+; boundary_port         ; 119                         ;
+;                       ;                             ;
+; Max LUT depth         ; 18.40                       ;
+; Average LUT depth     ; 15.26                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:07     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+    Info: Processing started: Thu Mar 18 08:21:52 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off core -c core
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 10 design units, including 10 entities, in source file /users/freddy gabbay/documents/riscv for de0/rv32i-verilog-master/src/core/core.v
+    Info (12023): Found entity 1: controlUnit
+    Info (12023): Found entity 2: programCounter
+    Info (12023): Found entity 3: regFile
+    Info (12023): Found entity 4: alu
+    Info (12023): Found entity 5: lis
+    Info (12023): Found entity 6: br
+    Info (12023): Found entity 7: executionUnit
+    Info (12023): Found entity 8: timer
+    Info (12023): Found entity 9: crs_unit
+    Info (12023): Found entity 10: core
+Info (12127): Elaborating entity "core" for the top level hierarchy
+Info (12128): Elaborating entity "controlUnit" for hierarchy "controlUnit:controlUnit_inst"
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(354): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(360): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(363): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(370): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(382): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(384): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(398): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(407): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(409): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(417): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(422): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(429): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(437): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(445): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(451): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(452): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(454): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(455): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(458): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(459): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(462): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(463): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(466): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(467): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(484): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(486): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(493): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(494): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(495): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(496): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(497): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(501): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(516): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(518): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(528): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(532): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(536): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(547): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(553): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(554): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(555): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(556): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(557): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(558): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(560): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(561): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(564): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(576): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(577): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(578): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(579): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(580): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(581): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(582): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(583): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(586): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(611): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(615): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(619): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(623): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(627): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(631): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at core_control_unit.v(636): truncated value with size 32 to match size of target (2)
+Info (12128): Elaborating entity "programCounter" for hierarchy "programCounter:program_counter_inst"
+Info (12128): Elaborating entity "regFile" for hierarchy "regFile:reg_file_inst"
+Info (12128): Elaborating entity "executionUnit" for hierarchy "executionUnit:exec_unit_inst"
+Info (12128): Elaborating entity "alu" for hierarchy "executionUnit:exec_unit_inst|alu:ALU"
+Info (12128): Elaborating entity "lis" for hierarchy "executionUnit:exec_unit_inst|lis:LIS"
+Info (12128): Elaborating entity "br" for hierarchy "executionUnit:exec_unit_inst|br:BR"
+Info (12128): Elaborating entity "crs_unit" for hierarchy "crs_unit:crs_unit_inst"
+Info (12128): Elaborating entity "timer" for hierarchy "crs_unit:crs_unit_inst|timer:timer_inst"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2862 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 66 input pins
+    Info (21059): Implemented 53 output pins
+    Info (21061): Implemented 2743 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 4759 megabytes
+    Info: Processing ended: Thu Mar 18 08:22:01 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:09
+
+

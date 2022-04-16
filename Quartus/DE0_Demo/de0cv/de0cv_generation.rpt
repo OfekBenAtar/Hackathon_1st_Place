@@ -1,0 +1,27 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory="C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo" --output-directory="C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv" --report-file="bsf:C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv\de0cv.bsf" --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CEBA4F23C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file="C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv.qsys"
+Progress: Loading DE0_Demo/de0cv.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 14.0]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory="C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo" --output-directory="C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv\synthesis" --file-set=QUARTUS_SYNTH --report-file="html:C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv\de0cv.html" --report-file="sopcinfo:C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv.sopcinfo" --report-file="cmp:C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv\de0cv.cmp" --report-file="qip:C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv\synthesis\de0cv.qip" --report-file="svd:C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv\synthesis\de0cv.svd" --report-file="regmap:C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv\synthesis\de0cv.regmap" --report-file="xml:C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv\de0cv.xml" --report-file="debuginfo:C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv\synthesis\de0cv.debuginfo" --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CEBA4F23C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file="C:\Users\freddy gabbay\Documents\Riscv for DE0\RV32i-Verilog-master\Quartus\DE0_Demo\de0cv.qsys" --language=VERILOG
+Progress: Loading DE0_Demo/de0cv.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 14.0]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: de0cv: Generating de0cv "de0cv" for QUARTUS_SYNTH
+Info: de0cv: Done "de0cv" with 1 modules, 1 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

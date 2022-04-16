@@ -1,0 +1,24 @@
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_TOOL_VERSION "14.0"
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "de0cv" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../../de0cv.sopcinfo"]
+set_global_assignment -entity "de0cv" -library "de0cv" -name SLD_INFO "QSYS_NAME de0cv HAS_SOPCINFO 1 GENERATION_ID 1650132554"
+set_global_assignment -library "de0cv" -name SLD_FILE [file join $::quartus(qip_path) "de0cv.debuginfo"]
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_TARGETED_DEVICE_FAMILY "Cyclone V"
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_GENERATED_DEVICE_FAMILY "{Cyclone V}"
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_QSYS_MODE "UNKNOWN"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "de0cv" -name MISC_FILE [file join $::quartus(qip_path) "../../../de0cv.qsys"]
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_COMPONENT_NAME "ZGUwY3Y="
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_COMPONENT_DISPLAY_NAME "ZGUwY3Y="
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY1MDEzMjU1NA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNFQkE0RjIzQzc=::QXV0byBERVZJQ0U="
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "de0cv" -library "de0cv" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+
+set_global_assignment -library "de0cv" -name VERILOG_FILE [file join $::quartus(qip_path) "de0cv.v"]
