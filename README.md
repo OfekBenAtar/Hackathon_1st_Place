@@ -1,5 +1,6 @@
 # Hackathon_1st_Place
 FPGA Hackathon with RISC-V processor for computational acceleration.
+
 This project won first place in the hackathon of Ruppin Academic Center for year 2022.
 This hackathon was in cooperation and endorsed by industry leading companies such as Intel, Nvidia, Chain Reaction, Cadence, Western Digital and more.. 
 
