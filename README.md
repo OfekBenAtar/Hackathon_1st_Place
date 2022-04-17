@@ -1,5 +1,5 @@
 # Hackathon_1st_Place
-FPGA Hackathon with RISC-V processor for computational acceleration.
+FPGA Hackathon with RISC-V processor for AI computational acceleration.
 
 This project won first place in the hackathon of Ruppin Academic Center for year 2022.
 
